@@ -1,0 +1,159 @@
+/* =========================
+   ENVELOPE CONTAINER
+========================= */
+
+.envelope-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.envelope {
+  position: relative;
+
+  width: 320px;
+  height: 220px;
+
+  cursor: pointer;
+
+  perspective: 1000px;
+
+  transition: 0.5s;
+}
+
+/* =========================
+   BAGIAN BAWAH AMPOP
+========================= */
+
+.envelope::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: #ff6b81;
+
+  border-radius: 0 0 15px 15px;
+
+  z-index: 1;
+}
+
+/* =========================
+   SAYAP KIRI
+========================= */
+
+.envelope::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  border-top: 110px solid transparent;
+  border-bottom: 110px solid transparent;
+  border-left: 160px solid #ff758f;
+
+  left: 0;
+
+  z-index: 2;
+}
+
+/* =========================
+   SURAT
+========================= */
+
+.envelope-letter {
+  position: absolute;
+
+  width: 90%;
+  height: 90%;
+
+  background: white;
+
+  left: 5%;
+  top: 5%;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 70px;
+
+  z-index: 0;
+
+  transition: 1s ease;
+}
+
+.envelope.open .envelope-letter {
+  transform: translateY(-160px);
+
+  z-index: 5;
+}
+
+/* =========================
+   TUTUP AMPOP
+========================= */
+
+.envelope-front {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: #ff4d6d;
+
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+
+  transform-origin: top;
+
+  transition: 1s ease;
+
+  z-index: 4;
+}
+
+.envelope.open .envelope-front {
+  transform: rotateX(180deg);
+}
+
+/* =========================
+   SHADOW
+========================= */
+
+.envelope {
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.2));
+}
+
+/* =========================
+   GLOW EFFECT
+========================= */
+
+.envelope:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SURAT BERSINAR
+========================= */
+
+.envelope-letter span {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.container {
+  width: 95%;
+  max-width: 900px;
+
+  text-align: center;
+}
+
+h1 {
+  color: white;
+
+  margin-bottom: 30px;
+
+  font-size: 2.5rem;
+}
+
+.countdown-box {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.time {
+  width: 130px;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.time span {
+  display: block;
+
+  font-size: 40px;
+
+  font-weight: bold;
+
+  color: #ff4d6d;
+}
+
+.time small {
+  color: #666;
+}
+
+.message {
+  color: white;
+
+  margin-top: 30px;
+
+  font-size: 18px;
+}
+
+button {
+  margin-top: 30px;
+
+  padding: 15px 35px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: white;
+
+  color: #ff4d6d;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

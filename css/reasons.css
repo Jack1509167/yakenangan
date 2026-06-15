@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+
+  text-align: center;
+}
+
+h1 {
+  color: white;
+
+  margin-bottom: 30px;
+}
+
+.reason-card {
+  background: white;
+
+  min-height: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 25px;
+
+  padding: 30px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+#reasonText {
+  font-size: 22px;
+
+  color: #ff4d6d;
+
+  font-weight: bold;
+
+  line-height: 1.8;
+}
+
+button {
+  margin-top: 25px;
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  background: white;
+
+  color: #ff4d6d;
+}
+
+.next-btn {
+  background: #ff4d6d;
+
+  color: white;
+}
